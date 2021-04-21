@@ -13,11 +13,12 @@
 <body>
     <nav>
         <div class="nav-links">
-            <a class="active">/about</a>
+            <a href="./index.html">/about</a>
             <a href="./interests.html">/interests</a>
             <a href="./projects.html">/projects</a>
         </div>
     </nav>
+
     <main id="main_body">
         <header>
             <img src="./assets/CV_img.jpg" alt="portfolio-image" />
@@ -26,17 +27,31 @@
                 <h2>The Web Backend Developer</h2>
             </div>
         </header>
-
-        <article class="about">
+        <article class="about-project">
             <header>
-                <h2>About me</h2>
+                <h3>Podrozownik</h3>
             </header>
             <p>
-                I am a third year student at the Wrocław University of Technology. I don't like to stand still and that's why I'm a member of the Solvro scientific circle. I took part in two projects in Solvro - the application for TK Games and the application for Papua.
-                Thanks to that I gained a lot of knowledge in writing applications in NodeJs, Python and Java. Moreover, I learned how to use Docker, create Dockerfile and docker-compose.
+                Thanks to this project I've learned a lot about project management and got familiar with technologies like Django REST Framework and React. Moreover, the project was implemented using basic DevOps techniques like - Continious Integration using a pipeline
+                configured in Gitlab-ci to run separate tasks for frontend and backend, - Continious Deployment on Heroku using pipeline and dpl.
             </p>
-        </article>
 
+          <pre>
+            <code>
+      deploy_to_production:
+        stage: deploy
+        script:
+          - apt-get update -qy
+          - apt-get install -y ruby-dev
+          - gem install dpl
+          - cd api/
+          - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_AUTH_TOKEN
+        rules:
+          - if: '$CI_COMMIT_BRANCH == "master"'
+
+            </code>
+          </pre>
+        </article>
         <section class="contact">
             <h2>Contact</h2>
             <ul class="social-media">

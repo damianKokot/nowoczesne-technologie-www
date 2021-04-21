@@ -13,11 +13,12 @@
 <body>
     <nav>
         <div class="nav-links">
-            <a class="active">/about</a>
+            <a href="./index.html">/about</a>
             <a href="./interests.html">/interests</a>
             <a href="./projects.html">/projects</a>
         </div>
     </nav>
+
     <main id="main_body">
         <header>
             <img src="./assets/CV_img.jpg" alt="portfolio-image" />
@@ -26,17 +27,26 @@
                 <h2>The Web Backend Developer</h2>
             </div>
         </header>
-
-        <article class="about">
+        <article class="about-project">
             <header>
-                <h2>About me</h2>
+                <h3>Solvro Sante</h3>
             </header>
             <p>
-                I am a third year student at the Wrocław University of Technology. I don't like to stand still and that's why I'm a member of the Solvro scientific circle. I took part in two projects in Solvro - the application for TK Games and the application for Papua.
-                Thanks to that I gained a lot of knowledge in writing applications in NodeJs, Python and Java. Moreover, I learned how to use Docker, create Dockerfile and docker-compose.
+                Solvro Sante is a charity project that collects and processes data on the health of the people of Papua in New Guinea. Our task was to create a system that works even in difficult conditions. My task was to create a module responsible for generating reports
+                using data collected by LimeSurvey to database. Our work was described on Wrocław University. I've got a lot of experience with Java 8, git, Maven and basics of code review.
             </p>
+            <pre>
+              <code>
+    graphFactory.generateChartPng(
+      report.getGraph(),
+      Paths.get(
+          ReportController.tempDirResPath,
+          "Graph.png"
+      ).toString()
+    );
+              </code>
+            </pre>
         </article>
-
         <section class="contact">
             <h2>Contact</h2>
             <ul class="social-media">

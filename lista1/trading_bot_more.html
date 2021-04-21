@@ -13,11 +13,12 @@
 <body>
     <nav>
         <div class="nav-links">
-            <a class="active">/about</a>
+            <a href="./index.html">/about</a>
             <a href="./interests.html">/interests</a>
             <a href="./projects.html">/projects</a>
         </div>
     </nav>
+
     <main id="main_body">
         <header>
             <img src="./assets/CV_img.jpg" alt="portfolio-image" />
@@ -26,17 +27,25 @@
                 <h2>The Web Backend Developer</h2>
             </div>
         </header>
-
-        <article class="about">
+        <article class="about-project">
             <header>
-                <h2>About me</h2>
+                <h3>Trading bot</h3>
             </header>
             <p>
-                I am a third year student at the Wrocław University of Technology. I don't like to stand still and that's why I'm a member of the Solvro scientific circle. I took part in two projects in Solvro - the application for TK Games and the application for Papua.
-                Thanks to that I gained a lot of knowledge in writing applications in NodeJs, Python and Java. Moreover, I learned how to use Docker, create Dockerfile and docker-compose.
+                Trading bot is part of the Python course in my studies. In a team of four we have created a platform for investing fictional money using one of the three algorithms created by us. This project brought me a lot of knowledge about pipeline configuration,
+                team management and Django knowledge.
             </p>
+            <pre>
+            <code>
+      RUN conda create -n trade-server -y
+      COPY environment.yml .
+      RUN conda env update -n trade-server
+      
+      RUN echo "source activate trade-server" > ~/.bashrc
+      ENV PATH /opt/conda/envs/trade-server/bin:$PATH
+            </code>
+          </pre>
         </article>
-
         <section class="contact">
             <h2>Contact</h2>
             <ul class="social-media">
